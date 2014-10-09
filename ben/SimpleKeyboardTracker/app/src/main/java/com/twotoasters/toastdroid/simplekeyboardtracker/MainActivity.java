@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-import com.twotoasters.toastdroid.simplekeyboardtracker.EditTextBackEvent.BackPressedListener;
+import com.twotoasters.toastdroid.simplekeyboardtracker.EditText.BackPressedListener;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditTextBackEvent editText = (EditTextBackEvent) findViewById(R.id.edit_text);
+        EditText editText = (EditText) findViewById(R.id.edit_text);
         editText.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
 
         editText.setBackPressedListener(new BackPressedListener() {
             @Override
-            public void onImeBack(EditTextBackEvent ctrl, String text) {
+            public void onImeBack(EditText ctrl, String text) {
                 isKeyboardOpen = false;
             }
         });
