@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.twotoasters.toastdroid.simplekeyboardtracker"
-        minSdkVersion 16
+        minSdkVersion 4
         targetSdkVersion 20
         versionCode 1
         versionName "1.0"

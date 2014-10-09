@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-import com.twotoasters.toastdroid.simplekeyboardtracker.EditText.BackPressedListener;
+import com.twotoasters.toastdroid.simplekeyboardtracker.BackAwareEditText.BackPressedListener;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
@@ -21,18 +21,17 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText editText = (EditText) findViewById(R.id.edit_text);
+        BackAwareEditText editText = (BackAwareEditText) findViewById(R.id.edit_text);
         editText.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 isKeyboardOpen = true;
-
             }
         });
 
         editText.setBackPressedListener(new BackPressedListener() {
             @Override
-            public void onImeBack(EditText ctrl, String text) {
+            public void onImeBack(BackAwareEditText editText) {
                 isKeyboardOpen = false;
             }
         });
@@ -42,7 +41,7 @@ public class MainActivity extends Activity {
         button.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                String message = isKeyboardOpen ? "Keyboard is open" : "Keyboard is closed";
+                int message = isKeyboardOpen ? R.string.keyboard_open : R.string.keyboard_closed;
                 Crouton.cancelAllCroutons();
                 Crouton.showText(activity, message, Style.INFO);
             }
@@ -50,8 +49,8 @@ public class MainActivity extends Activity {
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
+    protected void onPause() {
+        super.onPause();
         isKeyboardOpen = false;
     }
 }

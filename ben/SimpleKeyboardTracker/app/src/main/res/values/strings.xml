@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">Simple Keyboard Tracker</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Keyboard Tracker</string>
     <string name="is_keyboard_open">Is the keyboard open?</string>
-
+    <string name="keyboard_closed">Keyboard is closed</string>
+    <string name="keyboard_open">Keyboard is open</string>
 </resources>
