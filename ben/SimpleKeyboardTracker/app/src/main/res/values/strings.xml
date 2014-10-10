@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Keyboard Tracker</string>
+    <string name="is_keyboard_open">Is the keyboard open?</string>
+    <string name="keyboard_closed">Keyboard is closed</string>
+    <string name="keyboard_open">Keyboard is open</string>
+</resources>
