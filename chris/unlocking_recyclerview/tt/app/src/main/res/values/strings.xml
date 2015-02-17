@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Job Scheduler Example</string>
+    <string name="log_message">Look in the CatLog to see Job Scheduler Messages.</string>
+    <string name="schedule_job">Schedule Job</string>
+    <string name="job_scheduled_successfully">Job scheduled successfully!</string>
+
+</resources>
